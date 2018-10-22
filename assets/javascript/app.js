@@ -117,11 +117,11 @@ var countDown = function(seconds) {
             for (var k = 0; k<10; k++) {
                 if ($('input:radio[name="' + questions[k].name + '"]:checked').val() === questions[k].correct) {
                     correctAnswers++;
-                } else if ($('input:radio[name="' + questions[k].name + '"]:checked').val() === "") {
-                    unanswered++;
+                } else if ($('input:radio[name="' + questions[k].name + '"]:checked').val() !== questions[k].correct) {
+                    wrongAnswers++;
                 }
                 else {
-                    wrongAnswers++;
+                    unanswered++;
                 };
             };
             
@@ -150,11 +150,11 @@ var scoreBoard = $('#submitButton').on("click", function(){
     for (var i=0; i<10; i++){
         if ($('input:radio[name="' + questions[i].name + '"]:checked').val() === questions[i].correct) {
             correctAnswers++;
-        } else if ($('input:radio[name="' + questions[i].name + '"]:checked').val() === "") {
-            unanswered++;
+        } else if ($('input:radio[name="' + questions[i].name + '"]:checked').val() !== questions[i].correct) {
+            wrongAnswers++;
         }
         else {
-            wrongAnswers++;
+            unanswered++;
         };
     };
 
