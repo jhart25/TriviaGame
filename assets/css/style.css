@@ -1,0 +1,14 @@
+.big-banner {
+    background-image: url(../images/sunny.jpg);
+}
+body {
+    background-image: url(../images/background.jpg);
+    background-size: 100%;
+}
+.btn{
+    padding: 20px 200px;
+}
+
+
+
+
